@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(pip install *)",
+      "PowerShell(cd \"C:\\\\Users\\\\rnrrb\\\\Desktop\\\\pureset\"; Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"cd 'C:\\\\Users\\\\rnrrb\\\\Desktop\\\\pureset'; streamlit run app.py\")",
+      "PowerShell(Get-ChildItem -Recurse \"C:\\\\Users\\\\rnrrb\\\\Desktop\\\\pureset\" | Where-Object { -not $_.PSIsContainer } | Select-Object FullName, Length)",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\rnrrb\\\\Desktop\\\\pureset\" -Recurse -File | ForEach-Object { \"$\\($_.FullName.Replace\\('C:\\\\Users\\\\rnrrb\\\\Desktop\\\\pureset\\\\',''\\)\\) \\($\\([math]::Round\\($_.Length/1KB,1\\)\\) KB\\)\" })",
+      "Bash(pip install *)",
+      "Bash(python *)",
+      "Bash(xargs ls *)"
+    ]
+  }
+}
